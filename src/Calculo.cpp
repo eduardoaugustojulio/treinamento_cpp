@@ -1,53 +1,41 @@
-/* 
- * File:   Fibonacci.cpp
- * Author: fronald
- * 
- * Created on 21 de Outubro de 2016, 11:02
- */
-
+#include <iostream>
 #include "Calculo.h"
-#include <vector>
 
-Calculo::Calculo(int inicio, unsigned int tamanho, Interceptador *interceptador) {
+Calculo::Calculo(int inicio, unsigned int tamanho) 
+{
     this->inicio = inicio;
     this->tamanho = tamanho;
-    if(interceptador == 0){
-        this->interceptador = new Interceptador();
-    }else{
-        this->interceptador = interceptador;
-    }
 }
 
-void Calculo::calcula() {
-    // TODO: Implementar
+Calculo::~Calculo()
+{
+	this->inicio = 0;
 }
 
-void Calculo::limpaCalculo(){
-    //
+void Calculo::calcula() 
+{
 }
 
-unsigned int Calculo::numeroResultados(){
-   // TODO: Implementar
-    return 0;
+void Calculo::limpaCalculo()
+{
 }
 
-int Calculo::resultado(unsigned int indice){
-   // TODO: Implementar
-    return 0;
+unsigned int Calculo::numeroResultados()
+{
+	return 0;
 }
 
-string Calculo::toString(char sep){
-    // TODO: Implementar
-    return "";
+int Calculo::resultado(unsigned int indice)
+{
+	return 0;
 }
 
-string Calculo::nome() const{
-    return "Calculo vazio";
+std::string Calculo::toString(char sep)
+{
+	return "";
 }
 
-Calculo::~Calculo() {
-    this->inicio = 0;
-    if(interceptador != 0){
-        delete interceptador;
-    }
+std::string Calculo::nome() const
+{
+	return "Calculo vazio";
 }
